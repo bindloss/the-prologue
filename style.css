@@ -556,7 +556,7 @@ iframe {
 }
 
 .green-bg {
-	background-color: #79d491;
+	background-color: #C4F2C5;
 }
 
 .grey-bg {
@@ -883,4 +883,13 @@ footer {
 }
 
 
+
+.js.dropdownMenu>h3 {border-top:1px solid #ddd; padding: 8px 0;}
+.js.dropdownMenu>h3:hover {cursor:pointer; color: green;}
+.js.dropdownMenu .menuItem {padding-bottom: 30px;}
+
+.container{
+	width: 80%;
+  margin: 0 auto;
+}
     

@@ -1,3 +1,22 @@
+// Dropdown menu
+
+$( document ).ready(function() {
+
+	$('.dropdownMenu').hide();
+	$('.other').on('click', function(){
+	  
+	  $('.dropdownMenu').slideToggle('300');
+	});
+
+	// SubMenu
+
+	$('.dropdownMenu').addClass('js');
+	$('.menuItem').hide();
+	$('.dropdownMenu>h3').on('click', function(){
+	  $(this).next('.menuItem').slideToggle('300');
+	});
+});
+
 /*
 
 Landing banner script	
@@ -68,3 +87,5 @@ function showSlides(a) {
   thumbnail[galleryIndex-1].className += " active";
   captionText.innerHTML = thumbnail[galleryIndex-1].alt;
 }
+
+
