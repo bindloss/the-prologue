@@ -492,15 +492,12 @@ iframe {
 }
 
 /*	PERSONALISED STORY 	
-
 .story-heading {
     font-family: 'Lora', serif;
     font-size: 2em;
     color: #4F4F4F;
 	padding: 1em 0;
-
 }
-
 .personalised-story {
 	display: flex;
 	flex-direction: column;
@@ -508,15 +505,12 @@ iframe {
 	margin: 0 1em;
 	
 }
-
 .story-item {
 	padding: 0 1em;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
 }
-
 @media screen and (min-width: 700px) {
 	.personalised-story {
 		margin: 0 5em;
@@ -528,7 +522,6 @@ iframe {
 	.story-item:first-child {
 		padding-right: 1em;
 	}
-
 	.story-item:last-child {
 		padding-left: 1em;
 		padding-right: 0;
@@ -817,7 +810,77 @@ footer {
 	padding: 5em 0;
 }
 
-	
+/* SlideShow */
 
+.story {display:none;}
+
+.storyPic {
+	display:none;
+	height:450px;
+	width: 500px;
+	margin-left: auto;
+    margin-right: auto;
+	}
+
+.storyThumbnail:hover {
+  opacity: 0.3;
+
+}
+
+.storyThumbnail{
+	display: block;
+	width: 100px;
+	height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
 	
+.card-img-top{
+	height: 300px;
+}
 	
+.parallax { 
+    /* The image used */
+    background-image: url("images/children-writing.jpg");
+
+    /* Set a specific height */
+    height:300px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.aboutLeft{
+	height: 400px;
+
+}
+
+.aboutRight{
+	height: 400px;
+
+}
+
+
+.leftContent{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.leftContent img{
+	width: 150px;
+}
+
+.lowerBar{
+	height: 200px;
+}
+
+
+    
