@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+	<meta content="Luke Swann" name="author">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+
+	<!--[if lt IE 9]> 
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+        <![endif]-->
+
+	<!-- 	Font awesome and favicon 	-->
+
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+	<!--    Google Fonts     -->
+
+	<link href="https://fonts.googleapis.com/css?family=Lora%7cOld+Standard+TT%7cRoboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+
+	<title>Image gallery test</title>
+
+	<style>
+	
+	* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.gallery-container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.gallery{
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.thumbnail {
+  opacity: 0.6;
+	cursor: pointer;
+}
+
+.active,
+.thumbnail:hover {
+  opacity: 1;
+}
+	
+</style>
+
+</head>
+
+<body>
+
+	<!-- Container for the image gallery -->
+<div class="gallery-container">
+
+  <!-- Full-width images with number text -->
+  <div class="gallery">
+    <div class="numbertext">1 / 4</div>
+      <img src="images/girl-illustration.jpg" style="width: 100%; height:500px;">
+  </div>
+
+  <div class="gallery">
+    <div class="numbertext">2 / 4</div>
+      <img src="images/black-boy.jpg" style="width:100%" height="500px">
+  </div>
+
+  <div class="gallery">
+    <div class="numbertext">3 / 4</div>
+      <img src="images/children-writing.jpg" style="width:100%; height: 500px;">
+  </div>
+
+  <div class="gallery">
+    <div class="numbertext">4 / 4</div>
+      <img src="images/flying-kid.jpg" style="width:100%; height: 500px;">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="thumbnail" src="images/girl-illustration.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column"> 
+      <img class="thumbnail" src="images/black-boy.jpg" style="width:100%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+    </div>
+    <div class="column">
+      <img class="thumbnail" src="images/children-writing.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="thumbnail" src="images/flying-kid.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+  </div>
+</div>
+
+<script>
+
+var galleryIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(a) {
+  showSlides(galleryIndex += a);
+}
+
+// Thumbnail image controls
+function currentSlide(a) {
+  showSlides(galleryIndex = a);
+}
+
+function showSlides(a) {
+  var g;
+  var slides = document.getElementsByClassName("gallery");
+  var thumbnail = document.getElementsByClassName("thumbnail");
+  var captionText = document.getElementById("caption");
+  if (a > slides.length) {galleryIndex = 1}
+  if (a < 1) {galleryIndex = slides.length}
+  for (g = 0; g < slides.length; g++) {
+    slides[g].style.display = "none";
+    slides[g].style.display = "none";
+  }
+  for (g = 0; g < thumbnail.length; g++) {
+    thumbnail[g].className = thumbnail[g].className.replace(" active", "");
+  }
+  slides[galleryIndex-1].style.display = "block";
+  thumbnail[galleryIndex-1].className += " active";
+  captionText.innerHTML = thumbnail[galleryIndex-1].alt;
+}
+
+</script>
+</body>
+</html>
