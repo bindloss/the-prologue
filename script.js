@@ -1,13 +1,6 @@
 // Dropdown menu
 
 $( document ).ready(function() {
-
-	$('.dropdownMenu').hide();
-	$('.other').on('click', function(){
-	  
-	  $('.dropdownMenu').slideToggle('300');
-	});
-
 	// SubMenu
 
 	$('.dropdownMenu').addClass('js');
