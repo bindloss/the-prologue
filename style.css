@@ -540,6 +540,31 @@ iframe {
 /* Hide the images by default */
 .hidden-gallery{
 	display: none;
+	border-bottom: 5px solid #000;
+	
+}
+
+.illustration-bg-image {
+	background-image: url(images/black-girl-illustration.jpg);
+	background-size: cover;
+	
+}
+
+.illustration-bg-image2 {
+	background-image: url(images/white-boy-illustration-small.jpg);
+	background-size: cover;
+}
+
+.illustration-bg-image3 {
+	background-image: url(images/einstein.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.illustration-bg-image4 {
+	background-image: url(images/south-asian-boy.png);
+	background-size: contain;
+	background-position: center;
 	
 }
 
@@ -553,23 +578,6 @@ iframe {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-}
-
-.green-bg {
-	background-color: #C4F2C5;
-}
-
-.grey-bg {
-	background-color: #a7a7a7;
-}
-
-.red-bg {
-	background-color: #461415;
-	color: #FFF;
-}
-
-.blue-bg {
-	background-color: #63f3e5;
 }
 
 .gallery-heading {
@@ -592,17 +600,14 @@ iframe {
 		margin: 0 5em;
 	}
 	.hidden-gallery {
-		
+		background-color: transparent;
 	}
 	.gallery {
 		flex-direction: row;
 	}
 	.gallery-item {
-		flex-basis: 60%;
+		flex-basis: 50%;
 		height: 450px;
-	}
-	.gallery-item-small {
-		flex-basis: 40%;
 	}
 	.gallery-description {
 		padding: 0 2em;
@@ -626,7 +631,7 @@ iframe {
 	width: auto;
 	padding: 16px;
 	margin-top: -50px;
-	color: white;
+	color: #000;
 	font-weight: bold;
 	font-size: 20px;
 	border-radius: 0 3px 3px 0;
@@ -644,31 +649,16 @@ iframe {
 .prev:hover,
 .next:hover {
 	background-color: rgba(0, 0, 0, 0.8);
+	color: #FFF;
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
-	color: #f2f2f2;
+	color: #000;
 	font-size: 12px;
 	padding: 8px 12px;
 	position: absolute;
 	top: 0;
-}
-
-/* Container for image text */
-#caption {
-	color: yellow;
-	font-family: "Lora", serif;
-	font-weight: 900;
-	font-size: 1.4em;
-	line-height: 0;
-	letter-spacing: 1px;
-}
-.caption-container {
-	text-align: center;
-	background-color: rgba(0, 0, 0, 1);
-	padding: 2px 16px;
-	color: #FFF;
 }
 
 .row:after {
@@ -695,8 +685,6 @@ iframe {
 .thumbnail:hover {
 	opacity: 1;
 }
-
-
 
 
 /* 	FOLLOW 	*/
