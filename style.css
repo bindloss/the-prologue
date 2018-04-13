@@ -793,10 +793,10 @@ iframe {
 
 /* 	FOOTER 	*/
 
-footer {
+/*footer {
 	background-color: #222;
 	padding: 5em 0;
-}
+}*/
 
 /* SlideShow */
 
@@ -870,14 +870,55 @@ footer {
 	height: 200px;
 }
 
+.menuItem1{
+	color: #24993d;
+}
 
+/*#519548*/
+.menuItem2{
+	color: #24993d;
+}
+.menuItem3{
+	color: #24993d;
+}
+
+/*#f2e432*/
+
+.menuItem4{
+	color: #24993d;
+}
+.menuItem5{
+	color: #24993d;
+}
+.menuItem6{
+	color: #24993d;
+}
+
+.dropdownMenu h3{
+	text-align: center;
+}
+
+.dropdownMenu h3{
+	text-align: center;
+}
 
 .js.dropdownMenu>h3 {border-top:1px solid #ddd; padding: 8px 0;}
-.js.dropdownMenu>h3:hover {cursor:pointer; color: green;}
+.js.dropdownMenu>h3:hover {cursor:pointer; color: #228119;}
 .js.dropdownMenu .menuItem {padding-bottom: 30px;}
 
 .container{
-	width: 80%;
-  margin: 0 auto;
+	width: 87%;
+    margin: 0 auto;
 }
+
+.menuItem{
+	background-color:#ECECE8;
+	padding:10px;
+}
+
+
+
+
+
+
     
