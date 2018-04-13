@@ -916,6 +916,116 @@ iframe {
 	padding:10px;
 }
 
+/*  -------- FOOTER -------- */
+
+footer {
+	background-color: #222;
+	color: #FFF;
+}
+
+.back {
+	padding-top: 1em;
+	text-align: center;
+
+}
+
+.footer-container {
+	padding: 4em 1em 2em 1em;
+}
+
+@media screen and (min-width: 811px) {
+	.footer-container {
+		padding-bottom: 10em;
+	}
+}
+
+/* 	---- 	Column System 	----- 	*/
+
+[class^=col-] {
+	text-align: left;
+	width: 100%;
+}
+
+.col-2,
+.col-1 {
+	line-height: 0;
+}
+
+.col-1 {
+	font-size: 20px;
+	padding: 1em 0;
+}
+
+.col-1 p {
+	display: inline-block;
+	font-weight: 900;
+}
+
+.col-2 h4 {
+	font-family: "Merriweather", serif;
+	font-size: 30px;
+	font-weight: 900;
+	margin: 0;
+}
+
+.col-2 p {
+	padding-top: 1em;
+}
+
+
+.col-1 h4 {
+	font-family: "Merriweather", serif;
+	font-weight: 900;
+	font-size: 20px;
+	margin: 0;
+}
+
+@media screen and (min-width: 810px) {
+	[class^=col-] {
+		float: left;
+		padding: 0 2em;
+	}
+
+	.col-2 {
+		width: 50%;
+	}
+
+	.col-1 {
+		width: 25%;
+		font-size: 1rem;
+
+	}
+
+	[class^=col-]:first-child {
+		padding-left: 0;
+	}
+
+	[class^=col-]:last-child {
+		padding-right: 0;
+	}
+}
+
+.social-media-images {
+	padding-top: 1em;
+}
+
+.social-media-images:hover {
+	background-color: #FFF;
+	border-radius: 100%;
+	padding-top: 0;
+}
+
+.col-1 a, .col-2 a {
+	color: #1AC8ED;
+	font-weight: 700;
+}
+
+.col-2 a:hover,
+.col-1 a:hover {
+	color: #FFF;
+}
+
+
 
 
 
