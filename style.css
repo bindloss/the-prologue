@@ -487,7 +487,7 @@ iframe {
 	}
 	
 	.trailer-item-text {
-		padding-left: 2em;
+		padding-right: 2em;
 	}
 }
 
@@ -544,27 +544,32 @@ iframe {
 	
 }
 
-.illustration-bg-image {
-	background-image: url(images/black-girl-illustration.jpg);
+.illustration-bg-image1 {
+	background-image: url(images/south-asian-boy.png);
 	background-size: cover;
+	background-position: center;
+	height: 60vh;
+
 	
 }
 
 .illustration-bg-image2 {
-	background-image: url(images/white-boy-illustration-small.jpg);
-	background-size: cover;
-}
-
-.illustration-bg-image3 {
 	background-image: url(images/einstein.jpg);
 	background-size: cover;
 	background-position: center;
+	height: 40vh;
+}
+
+.illustration-bg-image3 {
+	background-image: url(images/white-boy-illustration-small.jpg);
+	background-size: cover;
+	height: 40vh;
 }
 
 .illustration-bg-image4 {
-	background-image: url(images/south-asian-boy.png);
-	background-size: contain;
-	background-position: center;
+	background-image: url(images/black-girl-illustration.jpg);
+	background-size: cover;
+	height: 40vh;
 	
 }
 
@@ -607,7 +612,8 @@ iframe {
 	}
 	.gallery-item {
 		flex-basis: 50%;
-		height: 450px;
+		height: 500px;
+		background-color: rgba(255, 255, 255, 0.3);
 	}
 	.gallery-description {
 		padding: 0 2em;
@@ -679,11 +685,18 @@ iframe {
 	cursor: pointer;
 	width: 100%;
 	height: 150px;
+	display: none;
 }
 
 .active,
 .thumbnail:hover {
 	opacity: 1;
+}
+
+@media screen and (min-width: 800px) {
+	.thumbnail {
+		display: block;
+	}
 }
 
 
@@ -853,7 +866,6 @@ iframe {
 
 }
 
-
 .leftContent{
 	position: absolute;
     top: 50%;
@@ -870,8 +882,25 @@ iframe {
 	height: 200px;
 }
 
-.menuItem1{
+.dropdown-menu-container{
+	margin: 3em 1em;
+	border: 1px solid lightgray;
+}
+
+@media screen and (min-width: 700px) {
+	.dropdown-menu-container {
+		margin: 5em;
+	}
+}
+
+.dropdown-menu-container h3 {
+	font-size: 1.5em;
 	color: #24993d;
+}
+
+.menuItem{
+	color: #222;
+	font-size: 1em;
 }
 
 /*#519548*/
@@ -898,22 +927,13 @@ iframe {
 	text-align: center;
 }
 
-.dropdownMenu h3{
-	text-align: center;
-}
-
 .js.dropdownMenu>h3 {border-top:1px solid #ddd; padding: 8px 0;}
 .js.dropdownMenu>h3:hover {cursor:pointer; color: #228119;}
 .js.dropdownMenu .menuItem {padding-bottom: 30px;}
 
-.container{
-	width: 87%;
-    margin: 0 auto;
-}
-
-.menuItem{
-	background-color:#ECECE8;
-	padding:10px;
+.menuItem {
+	background-color: transparent;
+	padding: 0.5em;
 }
 
 /*  -------- FOOTER -------- */
@@ -1025,10 +1045,3 @@ footer {
 	color: #FFF;
 }
 
-
-
-
-
-
-
-    
